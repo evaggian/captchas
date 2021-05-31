@@ -15,7 +15,8 @@
         android:layout_gravity="center"
         android:src="@drawable/logo1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="75dp" />
 
     <TextView
         android:id="@+id/main_activity_title"
