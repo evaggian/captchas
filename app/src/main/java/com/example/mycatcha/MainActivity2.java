@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.navigation.NavController;
@@ -29,6 +30,8 @@ public class MainActivity2 extends AppCompatActivity {
     private SensorManager sensorManager;
     private SensorEventListener proximitySensorListener, gyroscopeSensorListener, rvListener;
     private Sensor proximitySensor, gyroscopeSensor, rotationVectorSensor;
+
+    private CheckBox rotateCheck = (CheckBox)findViewById(R.id.instructions_gesture_captcha);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +137,8 @@ public class MainActivity2 extends AppCompatActivity {
 
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
-                    Toast.makeText(getApplicationContext(),"Congrats you succeeded!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
+                    rotateCheck.setChecked(true);
                 }
             }
 
