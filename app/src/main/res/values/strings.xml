@@ -25,4 +25,7 @@
     <string name="button">Continue</string>
 
     <string name="fourth_fragment_task_title">OCR CAPTCHA Task</string>
+    <string name="hint">Enter the letters above</string>
+    <string name="captchatext">CAPTCHA Text</string>
+    <string name="imageDisc">This is the text you have to fill in.</string>
 </resources>
