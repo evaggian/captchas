@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView simpleImageView=(ImageView) findViewById(R.id.simpleImageView);
-        simpleImageView.setImageResource(R.drawable.android_icon);//set the source in java class
+        //simpleImageView.setImageResource(R.drawable.android_icon);//set the source in java class
         simpleImageView.getLayoutParams().height = 300;
         simpleImageView.getLayoutParams().width = 300;
 
