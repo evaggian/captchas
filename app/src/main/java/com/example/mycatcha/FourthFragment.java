@@ -9,12 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.mycatcha.databinding.FragmentSecondBinding;
-import com.example.mycatcha.databinding.FragmentThirdBinding;
+import com.example.mycatcha.databinding.FragmentFourthBinding;
 
-public class ThirdFragment extends Fragment {
-
-    private FragmentThirdBinding binding;
+public class FourthFragment extends Fragment {
+    private FragmentFourthBinding binding;
 
     @Override
     public View onCreateView(
@@ -22,7 +20,7 @@ public class ThirdFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentThirdBinding.inflate(inflater, container, false);
+        binding = FragmentFourthBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -30,11 +28,11 @@ public class ThirdFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.nextButton.setOnClickListener(new View.OnClickListener() {
+        binding.buttonFourth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_ThirdFragment_to_FourthFragment);
+                NavHostFragment.findNavController(FourthFragment.this)
+                        .navigate(R.id.action_FourthFragment_to_FirstFragment);
             }
         });
     }
@@ -44,5 +42,4 @@ public class ThirdFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }
