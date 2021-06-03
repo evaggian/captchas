@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCatcha">
         <activity
-            android:name=".MainActivity2"
+            android:name=".RotationGestureActivity"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.MyCatcha.NoActionBar"></activity>
         <activity

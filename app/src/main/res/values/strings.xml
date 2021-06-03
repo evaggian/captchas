@@ -21,7 +21,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="hello_third_fragment">Hello third fragment</string>
-    <string name="first_instructions">Hi! We are IaMHUM@n team. We are doing an experiment about mobile captchas so we want explore 3 different options. To continue, click on the button below</string>
+    <string name="first_instructions">Hi! We are IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs so here we explore 3 different options.</string>
+    <string name="consent">By selecting "Continue" you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
     <string name="button">Continue</string>
 
     <string name="fourth_fragment_task_title">OCR CAPTCHA Task</string>
