@@ -1,14 +1,11 @@
 package com.example.mycatcha;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitMainButtonHandler(View view) {
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, RotationGestureActivity.class);
         startActivity(intent);
     }
 

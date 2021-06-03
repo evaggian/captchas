@@ -23,7 +23,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain2Binding;
 
-public class MainActivity3 extends AppCompatActivity {
+public class ProximitySensorActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain3Binding binding;
