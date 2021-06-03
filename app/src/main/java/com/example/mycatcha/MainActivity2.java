@@ -31,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
     private SensorEventListener proximitySensorListener, gyroscopeSensorListener, rvListener;
     private Sensor proximitySensor, gyroscopeSensor, rotationVectorSensor;
 
-    private CheckBox rotateCheck = (CheckBox)findViewById(R.id.instructions_gesture_captcha);
+    //private CheckBox rotateCheck = (CheckBox)findViewById(R.id.instructions_gesture_captcha);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +138,7 @@ public class MainActivity2 extends AppCompatActivity {
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
                     Toast.makeText(getApplicationContext(),"CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
-                    rotateCheck.setChecked(true);
+                    //rotateCheck.setChecked(true);
                 }
             }
 
