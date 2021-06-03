@@ -14,6 +14,7 @@
     <string name="first_fragment_label">Rotation CAPTCHA</string>
     <string name="second_fragment_label">Proximity CAPTCHA</string>
     <string name="third_fragment_label">Third Fragment</string>
+    <string name="fourth_fragment_label">Fourth Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -22,4 +23,6 @@
     <string name="hello_third_fragment">Hello third fragment</string>
     <string name="first_instructions">Hi! We are IaMHUM@n team. We are doing an experiment about mobile captchas so we want explore 3 different options. To continue, click on the button below</string>
     <string name="button">Continue</string>
+
+    <string name="fourth_fragment_task_title">OCR CAPTCHA Task</string>
 </resources>
