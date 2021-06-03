@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">IaMHUM@N</string>
     <string name="please_rotate_your_device_one_time_and_clockwise">Please rotate your device one time and clockwise. Once succeeded check the box.</string>
-    <string name="proximity_validation">CAPTCHA validation successful</string>
-    <string name="rotation_validation">CAPTCHA validation successful</string>
+    <string name="proximity_validation">Proximity CAPTCHA validation successful</string>
+    <string name="rotation_validation">Rotation CAPTCHA validation successful</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="register_title">Registration Form </string>

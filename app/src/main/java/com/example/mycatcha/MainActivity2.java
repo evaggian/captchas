@@ -137,7 +137,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
-                    Toast.makeText(getApplicationContext(),"CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Rotation CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
                     //rotateCheck.setChecked(true);
                 }
             }

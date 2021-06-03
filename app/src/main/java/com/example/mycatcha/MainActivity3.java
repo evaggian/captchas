@@ -62,10 +62,12 @@ public class MainActivity3 extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
                     // Detected something nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    //getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    findViewById(R.id.proximity_view).setBackgroundColor(Color.GREEN);
+                    Toast.makeText(getApplicationContext(),"Proximity CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
                 } else {
                     // Nothing is nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
+                    getWindow().getDecorView().setBackgroundColor(Color.GRAY);
                 }
             }
 
