@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Model is:", getDeviceName());
 
         // Logging the phone's height and width:
-        Log.i("Screen width & height:", getScreenResolution());
+        //Log.i("Screen width & height:", getScreenResolution());
     }
 
     public void submitMainButtonHandler(View view) {
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //    Retrieving the device manufacturer and name.
-    public String getDeviceName() {
+    public static String getDeviceName() {
         String manufacturer = Build.MANUFACTURER;
         String model = Build.MODEL;
         if (model.toLowerCase().startsWith(manufacturer.toLowerCase())) {
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //    Capitalizing the first letter of the model or manufacturer.
-    private String capitalize(String s) {
+    private static String capitalize(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }
@@ -58,11 +60,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private String getScreenResolution() {
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-        int width = displayMetrics.widthPixels;
-        int height = displayMetrics.heightPixels;
-        return "{" + width + "," + height + "}";
+    static int random = new Random().nextInt(6000);
+    public static String getRandomID(){
+        Log.i("Random:", String.valueOf(random));
+        return String.valueOf(random);
     }
 }
