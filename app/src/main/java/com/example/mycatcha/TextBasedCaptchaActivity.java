@@ -41,24 +41,6 @@ public class TextBasedCaptchaActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        // OCR Captcha generation and check
-        im = (ImageView)findViewById(R.id.imageView3);
-        btn = (Button)findViewById(R.id.nextButton);
-        ans = (EditText)findViewById(R.id.textView3);
-
-        int image = getIntent().getIntExtra("image",R.drawable.images);
-        im.setImageResource(image);
-
-        btn.setEnabled(false);
-        btn.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v){
-                if (ans.toString() == cAnswer) {
-                    btn.setEnabled(true);
-                }
-            }
-        });
-
     }
 
     @Override
