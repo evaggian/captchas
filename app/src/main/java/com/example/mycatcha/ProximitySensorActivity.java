@@ -5,11 +5,13 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.example.mycatcha.databinding.ActivityMain3Binding;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
@@ -23,7 +25,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain2Binding;
 
-public class MainActivity3 extends AppCompatActivity {
+public class ProximitySensorActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain3Binding binding;
@@ -58,14 +60,17 @@ public class MainActivity3 extends AppCompatActivity {
 
         // Create listener
         proximitySensorListener = new SensorEventListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
                     // Detected something nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    //getWindow().getDecorView().setBackgroundColor(Color.RED);
+                    findViewById(R.id.proximity_view).setBackgroundColor(getColor(R.color.gotcha_green));
+                    Toast.makeText(getApplicationContext(),"Proximity CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
                 } else {
                     // Nothing is nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
+                    getWindow().getDecorView().setBackgroundColor(Color.GRAY);
                 }
             }
 

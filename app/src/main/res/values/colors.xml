@@ -13,4 +13,12 @@
     <color name="grey">#AFAFAF</color>
     <color name="brown">#5A4115</color>
     <color name="redish">#D67E82</color>
+
+    <!-- Specific Brand Colors -->
+    <color name="gotcha_blue">#4A90E2</color>
+    <color name="gotcha_light_blue">#4ABAE2</color>
+    <color name="gotcha_green">#B8E986</color>
+    <color name="gotcha_yellow">#FDDA0C</color>
+    <color name="gotcha_red">#E36C62</color>
+
 </resources>

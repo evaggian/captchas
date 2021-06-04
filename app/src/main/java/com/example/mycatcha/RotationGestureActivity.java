@@ -22,7 +22,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain2Binding;
 
-public class MainActivity2 extends AppCompatActivity {
+public class RotationGestureActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain2Binding binding;
@@ -47,58 +47,6 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
-        /* -------------------- proximity sensor --------------------- */
-
-        /*proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-
-        if(proximitySensor == null) {
-            Log.e("ERROR: ", "Proximity sensor not available.");
-            finish(); // Close app
-        }
-
-        // Create listener
-        proximitySensorListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-                if(sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
-                    // Detected something nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.RED);
-                } else {
-                    // Nothing is nearby
-                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {
-            }
-
-        };*/
-
-        /* -------------------- gyroscope sensor --------------------- */
-
-        /*gyroscopeSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
-
-        // Create a listener
-        gyroscopeSensorListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-                if(sensorEvent.values[2] > 0.5f) { // anticlockwise
-                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                } else if(sensorEvent.values[2] < -0.5f) { // clockwise
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {
-            }
-        };
-
-        // Register the listener
-        sensorManager.registerListener(gyroscopeSensorListener,
-                gyroscopeSensor, SensorManager.SENSOR_DELAY_NORMAL);*/
 
         rotationVectorSensor =
                 sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
@@ -137,7 +85,7 @@ public class MainActivity2 extends AppCompatActivity {
 
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
-                    Toast.makeText(getApplicationContext(),"CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Rotation CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
                     //rotateCheck.setChecked(true);
                 }
             }
