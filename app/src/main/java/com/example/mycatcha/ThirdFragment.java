@@ -3,7 +3,8 @@ package com.example.mycatcha;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.util.DisplayMetrics;
+import java.util.Date;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.mycatcha.databinding.FragmentSecondBinding;
 import com.example.mycatcha.databinding.FragmentThirdBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ThirdFragment extends Fragment {
 
@@ -28,6 +31,8 @@ public class ThirdFragment extends Fragment {
     public String value;
 
     private String cAnswer = "PQJRYD";
+    private Date date = new Date();
+    long start = (long) date.getTime();
 
     @Override
     public View onCreateView(
@@ -42,6 +47,13 @@ public class ThirdFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        MainActivity mainActivity = new MainActivity();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
+        DatabaseReference myRef = database.getReference("Random ID:" + MainActivity.getRandomID());
+        myRef.child("Phone model:").setValue(MainActivity.getDeviceName());
+        myRef.child("Phone resolution:").setValue(getScreenResolution());
 
         // OCR Captcha generation and check
         /*binding.nextButton.setEnabled(false);
@@ -68,6 +80,10 @@ public class ThirdFragment extends Fragment {
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Date date2 = new Date();
+                long end = (long) date2.getTime();
+                long timeSpent = end - start;
+                myRef.child("OCR Captcha time spent:").setValue(timeSpent);
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_ThirdFragment_to_FourthFragment);
             }
@@ -80,4 +96,10 @@ public class ThirdFragment extends Fragment {
         binding = null;
     }
 
+    public String getScreenResolution() {
+        int width = getResources().getConfiguration().screenWidthDp;
+        int height = getResources().getConfiguration().screenHeightDp;
+        int density = getResources().getDisplayMetrics().densityDpi;
+        return "{" + width + "," + height + "," + density + "}";
+    }
 }
