@@ -63,7 +63,7 @@ public class ThirdFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        });*/
 
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,7 +71,7 @@ public class ThirdFragment extends Fragment {
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_ThirdFragment_to_FourthFragment);
             }
-        });*/
+        });
     }
 
     @Override
