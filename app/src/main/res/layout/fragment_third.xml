@@ -3,54 +3,120 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ThirdFragment">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
-        android:text="@string/fourth_fragment_task_title"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/register_title"
         android:textColor="@color/gotcha_blue"
         android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/nextButton"
+    <EditText
+        android:id="@+id/fist_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:text="@string/next"
-        android:backgroundTint="@color/gotcha_blue"
+        android:layout_marginTop="100dp"
+        android:autofillHints="first_name"
+        android:ems="8"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:hint="@string/first_name"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textView3"
+        android:id="@+id/last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:hint="@string/hint"
-        android:autofillHints="@string/captchatext"
+        android:autofillHints="last_name"
+        android:ems="8"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:hint="@string/last_name"
         android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fist_name" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="email"
+        android:ems="8"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+    <CheckBox
+        android:id="@+id/conditions"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:backgroundTint="@color/gotcha_light_blue"
+        android:buttonTint="@color/gotcha_light_blue"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/terms_conditions"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/instructions_gesture_captcha"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/gotcha_green"
+        android:buttonTint="@color/gotcha_green"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/rotation_validation"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conditions" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/arrow_3"
+        app:layout_constraintBottom_toTopOf="@+id/button_third"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/instructions_gesture_captcha"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <Button
+        android:id="@+id/button_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/imageDisc"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/submit"
+        android:backgroundTint="@color/gotcha_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:src="@drawable/images" />
+        app:layout_constraintTop_toBottomOf="@id/instructions_gesture_captcha"
+        app:layout_constraintVertical_bias="0.775" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

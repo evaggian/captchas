@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitMainButtonHandler(View view) {
-        Intent intent = new Intent(this, RotationGestureActivity.class);
+        //Intent intent = new Intent(this, RotationGestureActivity.class);
+        Intent intent = new Intent(this, TextBasedCaptchaActivity.class);
         startActivity(intent);
     }
 

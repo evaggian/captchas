@@ -44,7 +44,7 @@ public class TextBasedCaptchaActivity extends AppCompatActivity {
 
         // OCR Captcha generation and check
         im = (ImageView)findViewById(R.id.imageView3);
-        btn = (Button)findViewById(R.id.nextButton);
+        btn = (Button)findViewById(R.id.button_first);
         ans = (EditText)findViewById(R.id.textView3);
 
         int image = getIntent().getIntExtra("image",R.drawable.images);
