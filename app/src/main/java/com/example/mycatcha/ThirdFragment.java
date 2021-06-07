@@ -1,26 +1,23 @@
 package com.example.mycatcha;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.DisplayMetrics;
-import java.util.Date;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.mycatcha.databinding.FragmentSecondBinding;
 import com.example.mycatcha.databinding.FragmentThirdBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Date;
 
 public class ThirdFragment extends Fragment {
 
@@ -80,12 +77,27 @@ public class ThirdFragment extends Fragment {
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Date date2 = new Date();
-                long end = (long) date2.getTime();
-                long timeSpent = end - start;
-                myRef.child("OCR Captcha time spent:").setValue(timeSpent);
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_ThirdFragment_to_SUSThirdFragment);
+                //Get the user's response in the CAPTCHA field:
+                ans = binding.textView3;
+                value = ans.getText().toString();
+                Log.i("User input:", value);
+
+                // Check if answer is correct:
+                if (value.contentEquals(cAnswer)) {
+                    myRef.child("CAPTCHA Answer:").setValue(value);
+
+
+                    //Get the time spent on this page:
+                    Date date2 = new Date();
+                    long end = (long) date2.getTime();
+                    long timeSpent = end - start;
+                    myRef.child("OCR Captcha time spent:").setValue(timeSpent);
+
+                    NavHostFragment.findNavController(ThirdFragment.this)
+                            .navigate(R.id.action_ThirdFragment_to_SUSThirdFragment);
+                } else {
+                    Toast.makeText(getActivity(), "Wrong CAPTCHA answer! Try again!", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
