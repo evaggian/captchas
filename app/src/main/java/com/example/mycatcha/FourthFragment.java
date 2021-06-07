@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.mycatcha.databinding.FragmentFourthBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class FourthFragment extends Fragment {
     private FragmentFourthBinding binding;
@@ -32,9 +34,13 @@ public class FourthFragment extends Fragment {
         TextView txt = (TextView) view.findViewById(R.id.textview_third);
         txt.setText("Your ID is:" + MainActivity.getRandomID());
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
+        DatabaseReference myRef = database.getReference("Random ID:" + MainActivity.getRandomID());
+
         binding.buttonFourth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                myRef.child("Completion").setValue(true);
                 NavHostFragment.findNavController(FourthFragment.this)
                         .navigate(R.id.action_FourthFragment_to_FirstFragment);
             }
