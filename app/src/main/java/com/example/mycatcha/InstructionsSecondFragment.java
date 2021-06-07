@@ -1,19 +1,25 @@
 package com.example.mycatcha;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.mycatcha.databinding.FragmentFourthBinding;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class FourthFragment extends Fragment {
-    private FragmentFourthBinding binding;
+import com.example.mycatcha.databinding.FragmentInstructionsSecondBinding;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link InstructionsSecondFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class InstructionsSecondFragment extends Fragment {
+
+    private FragmentInstructionsSecondBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +27,7 @@ public class FourthFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFourthBinding.inflate(inflater, container, false);
+        binding = com.example.mycatcha.databinding.FragmentInstructionsSecondBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -29,14 +35,11 @@ public class FourthFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView txt = (TextView) view.findViewById(R.id.textview_third);
-        txt.setText("Your ID is:" + MainActivity.getRandomID());
-
         binding.continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FourthFragment.this)
-                        .navigate(R.id.action_FourthFragment_to_ThankYouFragment);
+                NavHostFragment.findNavController(InstructionsSecondFragment.this)
+                        .navigate(R.id.action_InstructionsSecondFragment_to_SecondFragment);
             }
         });
     }

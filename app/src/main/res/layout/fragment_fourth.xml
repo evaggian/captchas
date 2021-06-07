@@ -11,16 +11,15 @@
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@id/button_fourth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_fourth"
+        android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:text="@string/submit"
         android:backgroundTint="@color/gotcha_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,6 +12,7 @@
     <string name="title_activity_main2">MainActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">Rotation CAPTCHA</string>
+    <string name="instructions_first_fragment_label">Instructions for first fragment</string>
     <string name="second_fragment_label">Proximity CAPTCHA</string>
     <string name="third_fragment_label">OCR CAPTCHA</string>
     <string name="fourth_fragment_label">Fourth Fragment</string>
@@ -29,4 +30,12 @@
     <string name="hint">Enter the letters above</string>
     <string name="captchatext">CAPTCHA Text</string>
     <string name="imageDisc">This is the text you have to fill in.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="instructions_second_fragment_label">instructions_second_fragment_label</string>
+    <string name="sus_first_fragment_label">sus_first_fragment_label</string>
+    <string name="sus_second_fragment_label">sus_second_fragment_label</string>
+    <string name="instructions_third_fragment_label">instructions_third_fragment_label</string>
+    <string name="sus_third_fragment_label">sus_third_fragment_label</string>
+    <string name="thankyou">thankyou</string>
 </resources>

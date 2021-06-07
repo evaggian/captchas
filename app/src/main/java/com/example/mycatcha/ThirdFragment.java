@@ -85,7 +85,7 @@ public class ThirdFragment extends Fragment {
                 long timeSpent = end - start;
                 myRef.child("OCR Captcha time spent:").setValue(timeSpent);
                 NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_ThirdFragment_to_FourthFragment);
+                        .navigate(R.id.action_ThirdFragment_to_SUSThirdFragment);
             }
         });
     }

@@ -4,16 +4,21 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.mycatcha.databinding.FragmentFourthBinding;
+import com.example.mycatcha.databinding.FragmentSUSFirstBinding;
 
-public class FourthFragment extends Fragment {
-    private FragmentFourthBinding binding;
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link SUSFirstFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class SUSFirstFragment extends Fragment {
+
+    private FragmentSUSFirstBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +26,7 @@ public class FourthFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFourthBinding.inflate(inflater, container, false);
+        binding = com.example.mycatcha.databinding.FragmentSUSFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -29,21 +34,13 @@ public class FourthFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView txt = (TextView) view.findViewById(R.id.textview_third);
-        txt.setText("Your ID is:" + MainActivity.getRandomID());
-
         binding.continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FourthFragment.this)
-                        .navigate(R.id.action_FourthFragment_to_ThankYouFragment);
+                NavHostFragment.findNavController(SUSFirstFragment.this)
+                        .navigate(R.id.action_SUSFirstFragment_to_InstructionsSecondFragment);
             }
         });
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
 }
