@@ -92,6 +92,7 @@ public class ThirdFragment extends Fragment {
                 if (value.contentEquals(cAnswer)) {
                     myRef.child("CAPTCHA Answer:").setValue(value);
 
+
                     //Get the time spent on this page:
                     Date date2 = new Date();
                     long end = (long) date2.getTime();
