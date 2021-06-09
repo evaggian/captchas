@@ -15,11 +15,6 @@ import com.example.mycatcha.databinding.FragmentInstructionsFirstBinding;
 
 import java.util.Objects;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link InstructionsFirstFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class InstructionsFirstFragment extends Fragment {
 
     private FragmentInstructionsFirstBinding binding;

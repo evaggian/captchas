@@ -10,11 +10,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mycatcha.databinding.FragmentThankYouBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the  factory method to
- * create an instance of this fragment.
- */
 public class ThankYouFragment extends Fragment {
 
     private FragmentThankYouBinding binding;

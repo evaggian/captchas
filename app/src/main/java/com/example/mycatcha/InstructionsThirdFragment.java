@@ -13,11 +13,6 @@ import android.view.ViewGroup;
 import com.example.mycatcha.databinding.FragmentInstructionsSecondBinding;
 import com.example.mycatcha.databinding.FragmentInstructionsThirdBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link InstructionsThirdFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class InstructionsThirdFragment extends Fragment {
 
     private FragmentInstructionsThirdBinding binding;

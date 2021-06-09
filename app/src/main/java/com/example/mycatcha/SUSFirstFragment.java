@@ -11,11 +11,6 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.mycatcha.databinding.FragmentSUSFirstBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SUSFirstFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SUSFirstFragment extends Fragment {
 
     private FragmentSUSFirstBinding binding;

@@ -12,11 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.mycatcha.databinding.FragmentSUSSecondBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SUSSecondFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SUSSecondFragment extends Fragment {
 
     private com.example.mycatcha.databinding.FragmentSUSSecondBinding binding;
