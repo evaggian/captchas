@@ -1,42 +1,62 @@
 <resources>
-    <string name="app_name">IaMHUM@N</string>
+    <string name="app_name">Gotcha!</string>
     <string name="please_rotate_your_device_one_time_and_clockwise">Please rotate your device one time and clockwise. Once succeeded check the box.</string>
-    <string name="proximity_validation">Proximity CAPTCHA validation successful</string>
-    <string name="ocr_validation">OCR CAPTCHA validation successful</string>
-    <string name="rotation_validation">Rotation CAPTCHA validation successful</string>
+    <string name="title_activity_main2">MainActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">OCR CAPTCHA</string>
+    <string name="second_fragment_label">Proximity CAPTCHA</string>
+    <string name="third_fragment_label">Rotation CAPTCHA</string>
+    <string name="fourth_fragment_label">Fourth Fragment</string>
+
+    <!-- Button texts -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="to_start">To Start</string>
+    <string name="submit">SUBMIT</string>
+
+    <!-- Introduction texts -->
+    <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
+    <string name="button">Continue</string>
+    <string name="consent">By selecting "Continue" you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
+
+    <!-- Form texts -->
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="register_title">Registration Form </string>
     <string name="email">Email</string>
     <string name="terms_conditions">I consent that my information is not stored.</string>
-    <string name="submit">SUBMIT</string>
-    <string name="title_activity_main2">MainActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">OCR CAPTCHA</string>
-    <string name="instructions_first_fragment_label">Instructions for first fragment</string>
-    <string name="second_fragment_label">Proximity CAPTCHA</string>
-    <string name="third_fragment_label">Rotation CAPTCHA</string>
-    <string name="fourth_fragment_label">Fourth Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+
+    <!-- CAPTCHA validation texts -->
+    <string name="proximity_validation">Proximity CAPTCHA validation successful</string>
+    <string name="rotation_validation">Rotation CAPTCHA validation successful</string>
+    <string name="ocr_validation">OCR CAPTCHA validation successful</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="hello_third_fragment">Hello third fragment</string>
-    <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
-    <string name="consent">By selecting "Continue" you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
-    <string name="button">Continue</string>
 
+    <!-- OCR CAPTCHA texts -->
     <string name="fourth_fragment_task_title">OCR CAPTCHA Task</string>
     <string name="hint">Enter the letters above</string>
     <string name="captchatext">CAPTCHA Text</string>
     <string name="imageDisc">This is the text you have to fill in.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="instructions_second_fragment_label">instructions_second_fragment_label</string>
-    <string name="sus_first_fragment_label">sus_first_fragment_label</string>
-    <string name="sus_second_fragment_label">sus_second_fragment_label</string>
-    <string name="instructions_third_fragment_label">instructions_third_fragment_label</string>
-    <string name="sus_third_fragment_label">sus_third_fragment_label</string>
-    <string name="thankyou">thankyou</string>
+    <string name="thankyou">Thank you for participating in our study!</string>
+
+    <!-- Instructions texts -->
+    <string name="instructions_first_fragment_label">Instructions 1</string>
+    <string name="instructions_second_fragment_label">Instructions 2</string>
+    <string name="instructions_third_fragment_label">Instructions 3</string>
+    <string name="instruction1_text">Instructions for OCR CAPTCHA here!</string>
+    <string name="instruction2_text">Instructions for proximity CAPTCHA here!</string>
+    <string name="instruction3_text">Instructions for rotation CAPTCHA here!</string>
+
+    <!-- SUS texts -->
+    <string name="sus_first_fragment_label">SUS OCR CAPTCHA</string>
+    <string name="sus_second_fragment_label">SUS Proximity CAPTCHA</string>
+    <string name="sus_third_fragment_label">SUS Rotation CAPTCHA</string>
+    <string name="sus">SUS questions here!</string>
 </resources>
