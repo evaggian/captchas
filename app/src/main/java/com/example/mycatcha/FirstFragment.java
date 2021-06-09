@@ -34,7 +34,7 @@ public class FirstFragment extends Fragment {
     private CheckBox checkboxConsent;
     private CheckBox checkboxOCRValidation;
 
-    public int userID;
+    public static int userID;
 
     @Override
     public View onCreateView(
@@ -157,6 +157,10 @@ public class FirstFragment extends Fragment {
         int height = getResources().getConfiguration().screenHeightDp;
         int density = getResources().getDisplayMetrics().densityDpi;
         return "{" + width + "," + height + "," + density + "}";
+    }
+
+    public static int getUserID(){
+        return userID;
     }
 
 }

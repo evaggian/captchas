@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/fist_name"
+        android:id="@+id/rotationFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/ocrLastName"
+        android:id="@+id/rotationLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="last_name"
@@ -46,10 +46,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fist_name" />
+        app:layout_constraintTop_toBottomOf="@+id/rotationFirstName" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/rotationEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="email"
@@ -60,10 +60,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ocrLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/rotationLastName" />
 
     <CheckBox
-        android:id="@+id/conditions"
+        android:id="@+id/checkBoxConsent"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="290dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/instructions_gesture_captcha"
+        android:id="@+id/checkboxRotValidation"
         android:layout_width="340dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/gotcha_green"
@@ -90,33 +90,32 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conditions" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxConsent" />
 
     <ImageView
         android:id="@+id/arrow"
         android:layout_width="60dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
         android:src="@drawable/arrow_3"
-        app:layout_constraintBottom_toTopOf="@+id/button_first"
+        app:layout_constraintBottom_toTopOf="@+id/rotationNextButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/instructions_gesture_captcha"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxRotValidation"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/rotationNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/gotcha_blue"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/submit"
-        android:backgroundTint="@color/gotcha_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instructions_gesture_captcha"
+        app:layout_constraintTop_toBottomOf="@+id/arrow"
         app:layout_constraintVertical_bias="0.775" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
