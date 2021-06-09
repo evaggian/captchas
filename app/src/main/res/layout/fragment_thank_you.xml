@@ -4,26 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FourthFragment">
+    tools:context=".ThankYouFragment">
 
     <TextView
-        android:id="@+id/textview_third"
+        android:id="@+id/thank_you_view"
         android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/continue_button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
-        android:backgroundTint="@color/gotcha_blue"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/thankyou"
+        android:textColor="@color/gotcha_blue"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_third" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

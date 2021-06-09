@@ -3,8 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/InstructionsFirstFragment">
 
+    <fragment
+        android:id="@+id/InstructionsFirstFragment"
+        android:name="com.example.mycatcha.InstructionsFirstFragment"
+        android:label="@string/instructions_first_fragment_label"
+        tools:layout="@layout/fragment_instructions_first">
+
+        <action
+            android:id="@+id/action_InstructionsFirstFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.mycatcha.FirstFragment"
@@ -12,7 +22,27 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_FirstFragment_to_SUSFirstFragment"
+            app:destination="@id/SUSFirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SUSFirstFragment"
+        android:name="com.example.mycatcha.SUSFirstFragment"
+        android:label="@string/sus_first_fragment_label"
+        tools:layout="@layout/fragment_s_u_s_first">
+
+        <action
+            android:id="@+id/action_SUSFirstFragment_to_InstructionsSecondFragment"
+            app:destination="@id/InstructionsSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InstructionsSecondFragment"
+        android:name="com.example.mycatcha.InstructionsSecondFragment"
+        android:label="@string/instructions_second_fragment_label"
+        tools:layout="@layout/fragment_instructions_second">
+
+        <action
+            android:id="@+id/action_InstructionsSecondFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
@@ -22,7 +52,27 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_ThirdFragment"
+            android:id="@+id/action_SecondFragment_to_SUSSecondFragment"
+            app:destination="@id/SUSSecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SUSSecondFragment"
+        android:name="com.example.mycatcha.SUSSecondFragment"
+        android:label="@string/sus_second_fragment_label"
+        tools:layout="@layout/fragment_s_u_s_second">
+
+        <action
+            android:id="@+id/action_SUSSecondFragment_to_InstructionsThirdFragment"
+            app:destination="@id/InstructionsThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InstructionsThirdFragment"
+        android:name="com.example.mycatcha.InstructionsThirdFragment"
+        android:label="@string/instructions_third_fragment_label"
+        tools:layout="@layout/fragment_instructions_third">
+
+        <action
+            android:id="@+id/action_InstructionsThirdFragment_to_ThirdFragment"
             app:destination="@id/ThirdFragment" />
     </fragment>
 
@@ -33,7 +83,17 @@
         tools:layout="@layout/fragment_third">
 
         <action
-            android:id="@+id/action_ThirdFragment_to_FourthFragment"
+            android:id="@+id/action_ThirdFragment_to_SUSThirdFragment"
+            app:destination="@id/SUSThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SUSThirdFragment"
+        android:name="com.example.mycatcha.SUSThirdFragment"
+        android:label="@string/sus_third_fragment_label"
+        tools:layout="@layout/fragment_s_u_s_third">
+
+        <action
+            android:id="@+id/action_SUSThirdFragment_to_FourthFragment"
             app:destination="@id/FourthFragment" />
     </fragment>
 
@@ -44,7 +104,15 @@
         tools:layout="@layout/fragment_fourth">
 
         <action
-            android:id="@+id/action_FourthFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_FourthFragment_to_ThankYouFragment"
+            app:destination="@id/ThankYouFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ThankYouFragment"
+        android:name="com.example.mycatcha.ThankYouFragment"
+        android:label="@string/thankyou"
+        tools:layout="@layout/fragment_thank_you">
+
     </fragment>
 </navigation>
