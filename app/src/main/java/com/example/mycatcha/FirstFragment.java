@@ -6,6 +6,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -24,6 +27,13 @@ public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
 
+    private EditText ocrName;
+    private EditText ocrLastName;
+    private EditText ocrEmail;
+    private EditText textViewCaptchaText;
+    private CheckBox checkboxConsent;
+    private CheckBox checkboxOCRValidation;
+
     public int userID;
 
     @Override
@@ -40,8 +50,14 @@ public class FirstFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         Instant start = Instant.now();
+
+        ocrName = requireView().findViewById(R.id.ocrFirstName);
+        ocrLastName = requireView().findViewById(R.id.ocrLastName);
+        ocrEmail = requireView().findViewById(R.id.ocrEmail);
+        checkboxConsent = requireView().findViewById(R.id.checkBoxConsent);
+        checkboxOCRValidation = requireView().findViewById(R.id.checkboxOCRValidation);
+        textViewCaptchaText = requireView().findViewById(R.id.textViewCaptchaText);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
 
@@ -57,18 +73,45 @@ public class FirstFragment extends Fragment {
         userRef.child("Phone model").setValue(phoneModel);
         userRef.child("Phone resolution").setValue(phoneResolution);
 
-        binding.nextButton.setOnClickListener(view1 -> {
+        binding.ocrNextButton.setOnClickListener(view1 -> {
 
-            long timeSpent = Duration.between(start, Instant.now()).getSeconds();
+            if(ocrName.getText().toString().isEmpty()){
+                Toast.makeText(getActivity(), "The first name field cannot be empty", Toast.LENGTH_LONG).show();
+            }
+            else if(ocrLastName.getText().toString().isEmpty()){
+                Toast.makeText(getActivity(), "The last name field cannot be empty", Toast.LENGTH_LONG).show();
 
-            Log.i("OCR task duration: ", String.valueOf(timeSpent));
+            }
+            else if(ocrEmail.getText().toString().isEmpty()){
+                Toast.makeText(getActivity(), "The email field cannot be empty", Toast.LENGTH_LONG).show();
+            }
+            else if(!checkboxConsent.isChecked()){
+                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+            }
+            else if(!checkboxOCRValidation.isChecked()){
+                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+            }
+            else if(!checkboxOCRValidation.isChecked()){
+                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+            }
+            else if(textViewCaptchaText.getText().toString().isEmpty()){
+                Toast.makeText(getActivity(), "Please fill in the captcha text!", Toast.LENGTH_LONG).show();
+            }
+            else if(!textViewCaptchaText.getText().toString().matches("PQJRYD")){
+                Toast.makeText(getActivity(), "The captcha you entered is wrong. Try again", Toast.LENGTH_LONG).show();
+            }
+            else {
+                long timeSpent = Duration.between(start, Instant.now()).getSeconds();
 
-            userRef.child("OCR Task duration").setValue(timeSpent);
-            userRef.child("OCR Task completed").setValue(1);
+                Log.i("OCR task duration: ", String.valueOf(timeSpent));
+
+                userRef.child("OCR Task duration").setValue(timeSpent);
+                userRef.child("OCR Task completed").setValue(1);
 
 
-            NavHostFragment.findNavController(FirstFragment.this)
-                    .navigate(R.id.action_FirstFragment_to_SUSFirstFragment);
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SUSFirstFragment);
+            }
         });
     }
 

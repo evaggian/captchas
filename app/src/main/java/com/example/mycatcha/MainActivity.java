@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView simpleImageView=(ImageView) findViewById(R.id.simpleImageView);
+        ImageView simpleImageView= findViewById(R.id.simpleImageView);
         simpleImageView.getLayoutParams().height = 300;
         simpleImageView.getLayoutParams().width = 300;
 

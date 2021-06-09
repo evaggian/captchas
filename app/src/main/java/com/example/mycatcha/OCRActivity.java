@@ -1,8 +1,6 @@
 package com.example.mycatcha;
 
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -11,8 +9,6 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain2Binding;
-
-import java.util.Random;
 
 public class OCRActivity extends AppCompatActivity {
 

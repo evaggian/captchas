@@ -7,21 +7,21 @@
     tools:context=".FirstFragment">
 
     <CheckBox
-        android:id="@+id/validation_proximity_check2"
+        android:id="@+id/checkboxOCRValidation"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/sunray"
         android:buttonTint="@color/sunray"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:text="@string/proximity_validation"
+        android:text="@string/ocr_validation"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conditions2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxConsent" />
 
     <EditText
-        android:id="@+id/last_name2"
+        android:id="@+id/ocrLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="last_name"
@@ -32,10 +32,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fist_name2" />
+        app:layout_constraintTop_toBottomOf="@+id/ocrFirstName" />
 
     <EditText
-        android:id="@+id/fist_name2"
+        android:id="@+id/ocrFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/email2"
+        android:id="@+id/ocrEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="email"
@@ -61,10 +61,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/last_name2" />
+        app:layout_constraintTop_toBottomOf="@+id/ocrLastName" />
 
     <CheckBox
-        android:id="@+id/conditions2"
+        android:id="@+id/checkBoxConsent"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -76,7 +76,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email2" />
+        app:layout_constraintTop_toBottomOf="@+id/ocrEmail" />
 
     <TextView
         android:id="@+id/textView"
@@ -93,19 +93,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/ocrNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="476dp"
-        android:text="@string/next"
         android:backgroundTint="@color/gotcha_blue"
+        android:onClick="Check"
+        android:text="@string/next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/textView3"
+        android:id="@+id/textViewCaptchaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
@@ -123,9 +124,9 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/imageDisc"
         android:src="@drawable/images"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCaptchaText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/validation_proximity_check2"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxOCRValidation"
         app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
