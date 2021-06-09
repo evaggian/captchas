@@ -1,9 +1,6 @@
 package com.example.mycatcha;
 
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -17,12 +14,6 @@ public class OCRActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMain2Binding binding;
-
-    ImageView im;
-    Button btn;
-    TextView ans;
-
-    private String cAnswer = "PQJRYD";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
