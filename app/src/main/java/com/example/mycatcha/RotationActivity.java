@@ -5,40 +5,31 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.mycatcha.databinding.ActivityMain2Binding;
+import com.example.mycatcha.databinding.ActivityMain4Binding;
 
-public class RotationGestureActivity extends AppCompatActivity {
+public class RotationActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMain2Binding binding;
+    private ActivityMain4Binding binding;
 
     private SensorManager sensorManager;
-    private SensorEventListener proximitySensorListener, gyroscopeSensorListener, rvListener;
-    private Sensor proximitySensor, gyroscopeSensor, rotationVectorSensor;
-
-    //private CheckBox rotateCheck = (CheckBox)findViewById(R.id.instructions_gesture_captcha);
+    private SensorEventListener rvListener;
+    private Sensor rotationVectorSensor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMain2Binding.inflate(getLayoutInflater());
+        binding = ActivityMain4Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -76,13 +67,7 @@ public class RotationGestureActivity extends AppCompatActivity {
                 }
 
                 Log.i("INFO", "Orientation =  " +  orientations[2]);
-                /*if(orientations[2] > 45) {
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
-                } else if(orientations[2] < -45) {
-                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
-                } else if(Math.abs(orientations[2]) < 10) {
-                    getWindow().getDecorView().setBackgroundColor(Color.WHITE);
-                }*/
+
 
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
@@ -100,25 +85,6 @@ public class RotationGestureActivity extends AppCompatActivity {
         sensorManager.registerListener(rvListener,
                 rotationVectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Register it, specifying the polling interval in
-        // microseconds
-        sensorManager.registerListener(proximitySensorListener,
-                proximitySensor, 2 * 1000 * 1000);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        // unregister listener
-        sensorManager.unregisterListener(proximitySensorListener);
-        sensorManager.unregisterListener(gyroscopeSensorListener);
     }
 
     @Override

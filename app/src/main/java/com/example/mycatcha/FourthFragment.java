@@ -32,7 +32,7 @@ public class FourthFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TextView txt = (TextView) view.findViewById(R.id.textview_third);
-        txt.setText("Your ID is:" + MainActivity.getRandomID());
+        txt.setText("Your ID is:" + OCRActivity.getRandomID());
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference myRef = database.getReference("Random ID:" + MainActivity.getRandomID());

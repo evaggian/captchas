@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_InstructionsSecondFragment"
+            android:id="@+id/action_FirstFragment_to_SUSFirstFragment"
             app:destination="@id/SUSFirstFragment" />
     </fragment>
     <fragment
