@@ -16,6 +16,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain4Binding;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 public class RotationActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
@@ -81,7 +83,7 @@ public class RotationActivity extends AppCompatActivity {
             }
         };
 
-// Register it
+        // Register it
         sensorManager.registerListener(rvListener,
                 rotationVectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
 
