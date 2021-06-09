@@ -1,14 +1,7 @@
 package com.example.mycatcha;
 
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
-import com.example.mycatcha.databinding.ActivityMain4Binding;
-
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,10 +11,12 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class TextBasedCaptchaActivity extends AppCompatActivity {
+import com.example.mycatcha.databinding.ActivityMain2Binding;
+
+public class OCRActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMain4Binding binding;
+    private ActivityMain2Binding binding;
 
     ImageView im;
     Button btn;
@@ -33,7 +28,7 @@ public class TextBasedCaptchaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMain4Binding.inflate(getLayoutInflater());
+        binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);

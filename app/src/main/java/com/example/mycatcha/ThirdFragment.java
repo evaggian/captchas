@@ -77,7 +77,7 @@ public class ThirdFragment extends Fragment {
             }
         });*/
 
-        binding.nextButton.setOnClickListener(new View.OnClickListener() {
+        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Date date2 = new Date();
