@@ -5,6 +5,7 @@
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">OCR CAPTCHA</string>
+    <string name="instructions_first_fragment_label">Instructions for the OCR CAPTCHA task</string>
     <string name="second_fragment_label">Proximity CAPTCHA</string>
     <string name="third_fragment_label">Rotation CAPTCHA</string>
     <string name="fourth_fragment_label">Fourth Fragment</string>
@@ -16,7 +17,6 @@
     <string name="submit">SUBMIT</string>
 
     <!-- Introduction texts -->
-    <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
     <string name="button">Continue</string>
     <string name="consent">By selecting "Continue" you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
 
@@ -47,10 +47,10 @@
     <string name="thankyou">Thank you for participating in our study!</string>
 
     <!-- Instructions texts -->
-    <string name="instructions_first_fragment_label">Instructions 1</string>
+    <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
     <string name="instructions_second_fragment_label">Instructions 2</string>
     <string name="instructions_third_fragment_label">Instructions 3</string>
-    <string name="instruction1_text">Instructions for OCR CAPTCHA here!</string>
+    <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.<br /> <br />The next task is the most common form of CAPTCHA, an image with several distorted letters. For this task you will have to fill in the letters shown in the picture into the respective field. </string>
     <string name="instruction2_text">Instructions for proximity CAPTCHA here!</string>
     <string name="instruction3_text">Instructions for rotation CAPTCHA here!</string>
 
