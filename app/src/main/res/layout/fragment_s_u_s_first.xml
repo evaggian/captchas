@@ -1,52 +1,636 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SUSFirstFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/sus_first_fragment_label"
-        android:textColor="@color/gotcha_blue"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/sus_questions"
+    <LinearLayout android:id="@+id/ScrollViewID"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginRight="50dp"
-        android:fontFamily="@font/montserrat"
-        android:gravity="center"
-        android:text="@string/sus"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_instructions"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Please score the following 10 items with one of five responses that range from 1 (= Strongly Disagree) to 5 (= Strongly Agree) for the captcha you just completed."
+            android:textColor="@color/gotcha_blue"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Question 1: I think that I would like to use this system frequently."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_1_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_1_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_1_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_1_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_1_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_1_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 2: I found the system unnecessarily complex."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_2_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_2_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_2_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_2_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_2_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_2_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Question 3: I thought the system was easy to use."
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_3_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_3_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_3_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_3_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_3_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_3_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 4: I think that I would need the support of a technical person to be able to use this system."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_4_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_4_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_4_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_4_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_4_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_4_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_5"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 5: I found the various functions in this system were well integrated."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_5_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_5_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_5_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_5_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_5_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_5_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_6"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 6: I thought there was too much inconsistency in this system."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_6_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_6_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_6_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_6_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_6_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_6_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_7"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 7: I would imagine that most people would learn to use this system very quickly."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_7_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_7_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_7_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_7_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_7_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_7_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 8: I found the system very cumbersome to use."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_8_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_8_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_8_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_8_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_8_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_8_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 9: I felt very confident using the system."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_9_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_9_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_9_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_9_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_9_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_9_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Question 10: I needed to learn a lot of things before I could get going with this system."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_10_radio"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_10_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_10_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_10_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_10_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_10_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="@color/gotcha_blue"
         android:fontFamily="@font/montserrat_bold"
-        android:text="@string/submit"
-        android:onClick="submitMainButtonHandler1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sus_questions" />
+        android:text="@string/submit" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</ScrollView>
