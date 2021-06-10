@@ -18,7 +18,7 @@ public class OCRActivity extends AppCompatActivity {
     private ActivityMain2Binding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
