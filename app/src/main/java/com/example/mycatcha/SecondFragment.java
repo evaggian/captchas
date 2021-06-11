@@ -14,6 +14,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,7 +29,11 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.mycatcha.databinding.ActivityMain3Binding;
 import com.example.mycatcha.databinding.FragmentSecondBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Objects;
 
 import static android.content.Context.SENSOR_SERVICE;
@@ -42,6 +48,13 @@ public class SecondFragment extends Fragment implements SensorEventListener{
     private SensorEventListener proximitySensorListener, gyroscopeSensorListener;
     private Sensor proximitySensor, gyroscopeSensor;
 
+    private EditText proximityFirstName;
+    private EditText proximityLastName;
+    private EditText proximityEmail;
+    private EditText textViewCaptchaText;
+    private CheckBox checkboxConsent;
+    private CheckBox checkboxProxValidation;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +64,7 @@ public class SecondFragment extends Fragment implements SensorEventListener{
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
+            Bundle savedInstanceState) {
 
         binding = FragmentSecondBinding.inflate(inflater, container, false);
         return binding.getRoot();
@@ -61,14 +73,8 @@ public class SecondFragment extends Fragment implements SensorEventListener{
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Instant start = Instant.now();
 
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_SUSSecondFragment);
-            }
-        });
 
         /* -------------------- proximity sensor --------------------- */
 
@@ -104,6 +110,55 @@ public class SecondFragment extends Fragment implements SensorEventListener{
             }
 
         };
+
+
+        // Input Fields check
+        proximityFirstName = requireView().findViewById(R.id.proximityFirstName);
+        proximityLastName = requireView().findViewById(R.id.proximityLastName);
+        proximityEmail = requireView().findViewById(R.id.proximityEmail);
+        checkboxConsent = requireView().findViewById(R.id.checkBoxConsent);
+        checkboxProxValidation = requireView().findViewById(R.id.checkboxProxValidation);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
+        Log.i("User ID: ", String.valueOf(FirstFragment.getUserID()));
+        DatabaseReference userRef = database.getReference("User ID:" + FirstFragment.getUserID());
+
+
+        // Check if input fields are filled when pressing button
+        binding.proximityNextButton.setOnClickListener(view1 -> {
+
+        if(proximityFirstName.getText().toString().isEmpty()){
+            Toast.makeText(getActivity(), "The first name field cannot be empty", Toast.LENGTH_LONG).show();
+        }
+        else if(proximityLastName.getText().toString().isEmpty()){
+            Toast.makeText(getActivity(), "The last name field cannot be empty", Toast.LENGTH_LONG).show();
+
+        }
+        else if(proximityEmail.getText().toString().isEmpty()){
+            Toast.makeText(getActivity(), "The email field cannot be empty", Toast.LENGTH_LONG).show();
+        }
+        else if(!checkboxConsent.isChecked()){
+            Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+        }
+        else if(!checkboxProxValidation.isChecked()){
+            Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+        }
+        else if(!checkboxProxValidation.isChecked()){
+            Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+        }
+        else {
+            long timeSpent = Duration.between(start, Instant.now()).getSeconds();
+
+            Log.i("Rotation task duration: ", String.valueOf(timeSpent));
+
+            userRef.child("Rotation Task duration").setValue(timeSpent);
+            userRef.child("Rotation Task completed").setValue(true);
+
+
+            NavHostFragment.findNavController(SecondFragment.this)
+                    .navigate(R.id.action_SecondFragment_to_SUSSecondFragment);
+        }
+    });
 
     }
 
