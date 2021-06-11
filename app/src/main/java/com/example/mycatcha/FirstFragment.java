@@ -74,13 +74,11 @@ public class FirstFragment extends Fragment {
         userRef.child("Phone resolution").setValue(phoneResolution);
 
         binding.ocrNextButton.setOnClickListener(view1 -> {
-
             if(ocrName.getText().toString().isEmpty()){
                 Toast.makeText(getActivity(), "The first name field cannot be empty", Toast.LENGTH_LONG).show();
             }
             else if(ocrLastName.getText().toString().isEmpty()){
                 Toast.makeText(getActivity(), "The last name field cannot be empty", Toast.LENGTH_LONG).show();
-
             }
             else if(ocrEmail.getText().toString().isEmpty()){
                 Toast.makeText(getActivity(), "The email field cannot be empty", Toast.LENGTH_LONG).show();
@@ -106,7 +104,7 @@ public class FirstFragment extends Fragment {
                 Log.i("OCR task duration: ", String.valueOf(timeSpent));
 
                 userRef.child("OCR Task duration").setValue(timeSpent);
-                userRef.child("OCR Task completed").setValue(1);
+                userRef.child("OCR Task completed").setValue(true);
 
 
                 NavHostFragment.findNavController(FirstFragment.this)
