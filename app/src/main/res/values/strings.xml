@@ -44,6 +44,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="thankyou">Thank you for participating in our study!</string>
+    <string name="close_app">You can close the app now.</string>
 
     <!-- Instructions texts -->
     <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
