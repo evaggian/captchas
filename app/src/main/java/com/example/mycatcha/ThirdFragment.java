@@ -102,7 +102,7 @@ public class ThirdFragment extends Fragment {
             Log.i("Rotation task duration: ", String.valueOf(timeSpent));
 
             userRef.child("Rotation Task duration").setValue(timeSpent);
-            userRef.child("Rotation Task completed").setValue(1);
+            userRef.child("Rotation Task completed").setValue(true);
 
 
             NavHostFragment.findNavController(ThirdFragment.this)

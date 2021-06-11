@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:text="Please score the following 10 items with one of five responses that range from 1 (= Strongly Disagree) to 5 (= Strongly Agree) for the captcha you just completed."
+            android:text="@string/sus_instructions"
             android:textColor="@color/gotcha_blue"
             android:textStyle="bold"/>
 
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="Question 1: I think that I would like to use this system frequently."
+            android:text="@string/sus_q1"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 2: I found the system unnecessarily complex."
+            android:text="@string/sus_q2"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -145,7 +145,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Question 3: I thought the system was easy to use."
+            android:text="@string/sus_q3"
             android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
@@ -206,7 +206,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 4: I think that I would need the support of a technical person to be able to use this system."
+            android:text="@string/sus_q4"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -266,7 +266,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 5: I found the various functions in this system were well integrated."
+            android:text="@string/sus_q5"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -326,7 +326,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 6: I thought there was too much inconsistency in this system."
+            android:text="@string/sus_q6"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -386,7 +386,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 7: I would imagine that most people would learn to use this system very quickly."
+            android:text="@string/sus_q7"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -446,7 +446,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 8: I found the system very cumbersome to use."
+            android:text="@string/sus_q8"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -506,7 +506,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 9: I felt very confident using the system."
+            android:text="@string/sus_q9"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
@@ -566,7 +566,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Question 10: I needed to learn a lot of things before I could get going with this system."
+            android:text="@string/sus_q10"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 

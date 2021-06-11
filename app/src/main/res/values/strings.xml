@@ -5,7 +5,6 @@
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">OCR CAPTCHA</string>
-    <string name="instructions_first_fragment_label">Instructions for the OCR CAPTCHA task</string>
     <string name="second_fragment_label">Proximity CAPTCHA</string>
     <string name="third_fragment_label">Rotation CAPTCHA</string>
     <string name="fourth_fragment_label">Fourth Fragment</string>
@@ -48,15 +47,27 @@
 
     <!-- Instructions texts -->
     <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
-    <string name="instructions_second_fragment_label">Instructions 2</string>
+    <string name="instructions_first_fragment_label">Instructions for the OCR CAPTCHA task</string>
+    <string name="instructions_second_fragment_label">Instructions for the Proximity CAPTCHA task</string>
     <string name="instructions_third_fragment_label">Instructions 3</string>
     <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.<br /> <br />The next task is the most common form of CAPTCHA, an image with several distorted letters. For this task you will have to fill in the letters shown in the picture into the respective field. </string>
-    <string name="instruction2_text">Instructions for proximity CAPTCHA here!</string>
+    <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software. In order to complete successfully this CAPTCHA you have to move your hand close to the proximity sensor of your phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
     <string name="instruction3_text">Instructions for rotation CAPTCHA here!</string>
 
     <!-- SUS texts -->
     <string name="sus_first_fragment_label">SUS OCR CAPTCHA</string>
     <string name="sus_second_fragment_label">SUS Proximity CAPTCHA</string>
     <string name="sus_third_fragment_label">SUS Rotation CAPTCHA</string>
+    <string name="sus_instructions">Please score the following 10 items with one of five responses that range from 1 (= Strongly Disagree) to 5 (= Strongly Agree) for the captcha you just completed.</string>
     <string name="sus">SUS questions here!</string>
+    <string name="sus_q1">Question 1: I think that I would like to use this system frequently.</string>
+    <string name="sus_q2">Question 2: I found the system unnecessarily complex.</string>
+    <string name="sus_q3">Question 3: I thought the system was easy to use.</string>
+    <string name="sus_q4">Question 4: I think that I would need the support of a technical person to be able to use this system.</string>
+    <string name="sus_q5">Question 5: I found the various functions in this system were well integrated.</string>
+    <string name="sus_q6">Question 6: I thought there was too much inconsistency in this system.</string>
+    <string name="sus_q7">Question 7: I would imagine that most people would learn to use this system very quickly.</string>
+    <string name="sus_q8">Question 8: I found the system very cumbersome to use.</string>
+    <string name="sus_q9">Question 9: I felt very confident using the system.</string>
+    <string name="sus_q10">Question 10: I needed to learn a lot of things before I could get going with this system.</string>
 </resources>
