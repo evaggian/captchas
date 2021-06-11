@@ -50,11 +50,11 @@
     <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
     <string name="instructions_first_fragment_label">Instructions for the OCR CAPTCHA task</string>
     <string name="instructions_second_fragment_label">Instructions for the Proximity CAPTCHA task</string>
-    <string name="instructions_third_fragment_label">Instructions 3</string>
+    <string name="instructions_third_fragment_label">Instructions for the Rotation CAPTCHA task</string>
     <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.<br /> <br />The next task is the most common form of CAPTCHA, an image with several distorted letters. For this task you will have to fill in the letters shown in the picture into the respective field. </string>
     <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software.</string>
-    <string name="instruction2_text_more">In order to complete successfully this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
-    <string name="instruction3_text">Instructions for rotation CAPTCHA here!</string>
+    <string name="instruction2_text_more">In order to successfully complete this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
+    <string name="instruction3_text">In order to successfully complete this CAPTCHA you have to rotate your phone clockwise for 180 degrees. Be aware to switch off the auto rotate mode of your phone!</string>
 
     <!-- SUS texts -->
     <string name="sus_first_fragment_label">SUS OCR CAPTCHA</string>
