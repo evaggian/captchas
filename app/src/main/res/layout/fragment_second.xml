@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/fist_name"
+        android:id="@+id/proximityFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/ocrLastName"
+        android:id="@+id/proximityLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="last_name"
@@ -46,10 +46,10 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fist_name" />
+        app:layout_constraintTop_toBottomOf="@+id/proximityFirstName" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/proximityEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints="email"
@@ -60,10 +60,10 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ocrLastName" />
+        app:layout_constraintTop_toBottomOf="@+id/proximityLastName" />
 
     <CheckBox
-        android:id="@+id/conditions"
+        android:id="@+id/checkBoxConsent"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="290dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/validation_proximity_check"
+        android:id="@+id/checkboxProxValidation"
         android:layout_width="340dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/gotcha_green"
@@ -89,22 +89,22 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/conditions" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxConsent" />
 
     <TextView
         android:id="@+id/proximity_view"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/gotcha_red"
-        app:layout_constraintBottom_toTopOf="@+id/button_second"
+        app:layout_constraintBottom_toTopOf="@+id/proximityNextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/validation_proximity_check"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxProxValidation"
         app:layout_constraintVertical_bias="0.168" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/proximityNextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/validation_proximity_check"
+        app:layout_constraintTop_toBottomOf="@id/checkboxProxValidation"
         app:layout_constraintVertical_bias="0.793" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
