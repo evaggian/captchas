@@ -52,7 +52,8 @@
     <string name="instructions_second_fragment_label">Instructions for the Proximity CAPTCHA task</string>
     <string name="instructions_third_fragment_label">Instructions 3</string>
     <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.<br /> <br />The next task is the most common form of CAPTCHA, an image with several distorted letters. For this task you will have to fill in the letters shown in the picture into the respective field. </string>
-    <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software. In order to complete successfully this CAPTCHA you have to move your hand close to the proximity sensor of your phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
+    <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software.</string>
+    <string name="instruction2_text_more">In order to complete successfully this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
     <string name="instruction3_text">Instructions for rotation CAPTCHA here!</string>
 
     <!-- SUS texts -->

@@ -31,11 +31,30 @@
         android:text="@string/instruction2_text"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/proximity_instructions_view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <TextView
+        android:id="@+id/proximity_instructions_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/instruction2_text_more"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/phone_hand"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.72" />
 
     <ImageView
         android:id="@+id/phone_hand"
@@ -44,9 +63,10 @@
         android:src="@drawable/phone_hand"
         app:layout_constraintBottom_toTopOf="@+id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proximity_instructions_view" />
+        app:layout_constraintTop_toBottomOf="@+id/proximity_instructions_view"
+        app:layout_constraintVertical_bias="0.775" />
 
     <Button
         android:id="@+id/continue_button"
