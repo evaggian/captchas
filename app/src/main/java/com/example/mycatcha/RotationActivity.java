@@ -40,53 +40,6 @@ public class RotationActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
-        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
-        rotationVectorSensor =
-                sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
-
-        // Create a listener
-        rvListener = new SensorEventListener() {
-            @Override
-            public void onSensorChanged(SensorEvent sensorEvent) {
-                float[] rotationMatrix = new float[16];
-                SensorManager.getRotationMatrixFromVector(
-                        rotationMatrix, sensorEvent.values);
-
-                // Remap coordinate system
-                float[] remappedRotationMatrix = new float[16];
-                SensorManager.remapCoordinateSystem(rotationMatrix,
-                        SensorManager.AXIS_X,
-                        SensorManager.AXIS_Z,
-                        remappedRotationMatrix);
-
-                // Convert to orientations
-                float[] orientations = new float[3];
-                SensorManager.getOrientation(remappedRotationMatrix, orientations);
-
-                for(int i = 0; i < 3; i++) {
-                    orientations[i] = (float)(Math.toDegrees(orientations[i]));
-                }
-
-                Log.i("INFO", "Orientation =  " +  orientations[2]);
-
-
-                if (orientations[2] > 170){
-                    System.out.println("Congrats you succeeded!");
-                    Toast.makeText(getApplicationContext(),"Rotation CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
-                    //rotateCheck.setChecked(true);
-                }
-            }
-
-            @Override
-            public void onAccuracyChanged(Sensor sensor, int i) {
-            }
-        };
-
-        // Register it
-        sensorManager.registerListener(rvListener,
-                rotationVectorSensor, SensorManager.SENSOR_DELAY_NORMAL);
-
     }
 
     @Override
