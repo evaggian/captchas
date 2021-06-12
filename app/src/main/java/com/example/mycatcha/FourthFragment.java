@@ -19,6 +19,9 @@ import com.example.mycatcha.databinding.FragmentFourthBinding;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class FourthFragment extends Fragment {
     private FragmentFourthBinding binding;
     private EditText age;
@@ -59,6 +62,9 @@ public class FourthFragment extends Fragment {
                 Toast.makeText(getActivity(), "Please answer all questions!", Toast.LENGTH_LONG).show();
             }
             else{
+                Date currentTime = Calendar.getInstance().getTime();
+
+                userRef.child("Timestamp").setValue(currentTime);
                 userRef.child("Gender").setValue(question_gender.getText());
                 userRef.child("Age").setValue(age.getText().toString());
                 userRef.child("Handedness").setValue(question_handedness.getText());
@@ -69,14 +75,6 @@ public class FourthFragment extends Fragment {
             }
         });
 
-//        binding.continueButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                myRef.child("Completion").setValue(true);
-//                NavHostFragment.findNavController(FourthFragment.this)
-//                        .navigate(R.id.action_FourthFragment_to_ThankYouFragment);
-//            }
-//        });
     }
 
     @Override
