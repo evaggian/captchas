@@ -72,4 +72,19 @@
     <string name="sus_q8">Question 8: I found the system very cumbersome to use.</string>
     <string name="sus_q9">Question 9: I felt very confident using the system.</string>
     <string name="sus_q10">Question 10: I needed to learn a lot of things before I could get going with this system.</string>
+
+    <!-- Demographic texts -->
+    <string name="gender">What is your gender?</string>
+    <string name="age">What is your age?</string>
+    <string name="age_hint">Type in your age</string>
+    <string name="demographics">Demographics</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+    <string name="other">other</string>
+    <string name="handedness">What is your handedness / preferred hand?</string>
+    <string name="right">right</string>
+    <string name="left">left</string>
+    <string name="both">both</string>
+    <string name="comment">Any other comment?</string>
+
 </resources>

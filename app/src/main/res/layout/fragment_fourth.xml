@@ -7,23 +7,229 @@
     tools:context=".FourthFragment">
 
     <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:text="@string/demographics"
+        android:textColor="@color/gotcha_blue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textview_third"
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:gravity="center"
+        android:textSize="10sp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintBottom_toTopOf="@+id/textView_1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/gender"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toTopOf="@+id/question_gender_radio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_third" />
+
+    <RadioGroup
+        android:id="@+id/question_gender_radio"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_1">
+
+        <RadioButton
+            android:id="@+id/radio_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/male"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toTopOf="@+id/continue_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radio_1_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_1" />
+
+        <RadioButton
+            android:id="@+id/radio_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/female"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toTopOf="@+id/continue_button"
+            app:layout_constraintEnd_toStartOf="@+id/radio_1_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/radio_1_1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_1" />
+
+        <RadioButton
+            android:id="@+id/radio_other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/other"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/continue_button"
+            app:layout_constraintTop_toBottomOf="@+id/textview_third" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/age"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toTopOf="@+id/age_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_gender_radio" />
+
+    <EditText
+        android:id="@+id/age_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/age_hint"
+        app:layout_constraintBottom_toTopOf="@+id/textView_handedness"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_2" />
+
+    <TextView
+        android:id="@+id/textView_handedness"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/handedness"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toTopOf="@+id/question_handedness_radio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_input" />
+
+    <RadioGroup
+        android:id="@+id/question_handedness_radio"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/comment_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_handedness">
+
+        <RadioButton
+            android:id="@+id/radio_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/left"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toTopOf="@+id/comment_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/radio_1_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_handedness" />
+
+        <RadioButton
+            android:id="@+id/radio_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/right"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toTopOf="@+id/comment_input"
+            app:layout_constraintEnd_toStartOf="@+id/radio_1_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/radio_1_1"
+            app:layout_constraintTop_toBottomOf="@+id/textView_handedness" />
+
+        <RadioButton
+            android:id="@+id/radio_both"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="@string/both"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/comment_input"
+            app:layout_constraintTop_toBottomOf="@+id/textView_handedness" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/comment_input"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:hint="@string/comment"
+        app:layout_constraintBottom_toTopOf="@+id/continue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_handedness_radio" />
 
     <Button
         android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submit"
         android:backgroundTint="@color/gotcha_blue"
+        android:text="@string/submit"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_third" />
+        app:layout_constraintTop_toBottomOf="@id/question_handedness_radio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,8 +45,8 @@ public class SecondFragment extends Fragment implements SensorEventListener{
     private FragmentSecondBinding binding;
 
     private SensorManager sensorManager;
-    private SensorEventListener proximitySensorListener, gyroscopeSensorListener;
-    private Sensor proximitySensor, gyroscopeSensor;
+    private SensorEventListener proximitySensorListener;
+    private Sensor proximitySensor;
 
     private EditText proximityFirstName;
     private EditText proximityLastName;
@@ -93,15 +93,11 @@ public class SecondFragment extends Fragment implements SensorEventListener{
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[0] < proximitySensor.getMaximumRange()) {
                     // Detected something nearby
-                    //getWindow().getDecorView().setBackgroundColor(Color.RED);
-                    //findViewById(R.id.proximity_view).setBackgroundColor(getColor(R.color.gotcha_green));
-                    getView().findViewById(R.id.proximity_view).setBackgroundColor(color.gotcha_green);
-                    //Toast.makeText(getApplicationContext(),"Proximity CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
+                    getView().findViewById(R.id.proximity_view).setBackgroundColor(getResources().getColor(color.gotcha_green));
                     Toast.makeText(getActivity(), "Proximity CAPTCHA validation successful!", Toast.LENGTH_LONG).show();
                 } else {
                     // Nothing is nearby
                     Log.i("nothing nearby", "nothing nearby");
-                    getView().findViewById(R.id.proximity_view).setBackgroundColor(color.gotcha_red);
                 }
             }
 
@@ -149,10 +145,10 @@ public class SecondFragment extends Fragment implements SensorEventListener{
         else {
             long timeSpent = Duration.between(start, Instant.now()).getSeconds();
 
-            Log.i("Rotation task duration: ", String.valueOf(timeSpent));
+            Log.i("Proximity task duration: ", String.valueOf(timeSpent));
 
-            userRef.child("Rotation Task duration").setValue(timeSpent);
-            userRef.child("Rotation Task completed").setValue(true);
+            userRef.child("Proximity Task duration").setValue(timeSpent);
+            userRef.child("Proximity Task completed").setValue(true);
 
 
             NavHostFragment.findNavController(SecondFragment.this)
@@ -178,7 +174,6 @@ public class SecondFragment extends Fragment implements SensorEventListener{
 
         // unregister listener
         sensorManager.unregisterListener(proximitySensorListener);
-        sensorManager.unregisterListener(gyroscopeSensorListener);
     }
 
 

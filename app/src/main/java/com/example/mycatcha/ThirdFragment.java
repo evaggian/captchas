@@ -136,7 +136,6 @@ public class ThirdFragment extends Fragment {
         }
         else if(rotationLastName.getText().toString().isEmpty()){
             Toast.makeText(getActivity(), "The last name field cannot be empty", Toast.LENGTH_LONG).show();
-
         }
         else if(rotationEmail.getText().toString().isEmpty()){
             Toast.makeText(getActivity(), "The email field cannot be empty", Toast.LENGTH_LONG).show();
