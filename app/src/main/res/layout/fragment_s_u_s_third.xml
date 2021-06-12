@@ -1,51 +1,636 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SUSThirdFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/sus_third_fragment_label"
-        android:textColor="@color/gotcha_blue"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/sus_questions"
+    <LinearLayout android:id="@+id/ScrollViewID"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginRight="50dp"
-        android:fontFamily="@font/montserrat"
-        android:gravity="center"
-        android:text="@string/sus"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/continue_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/gotcha_blue"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sus_questions" />
+        <TextView
+            android:id="@+id/textView_instructions_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/sus_instructions"
+            android:textColor="@color/gotcha_blue"
+            android:textStyle="bold"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView_1_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="@string/sus_q1"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/question_1_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_1_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_1_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_1_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_1_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_1_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_2_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q2"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/question_2_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_2_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_2_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_2_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_2_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_2_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_3_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sus_q3"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_3_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_3_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_3_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_3_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_3_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_3_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_4_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q4"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_4_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_4_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_4_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_4_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_4_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_4_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_5_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q5"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_5_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_5_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_5_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_5_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_5_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_5_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_6_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q6"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_6_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_6_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_6_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_6_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_6_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_6_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_7_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q7"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_7_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_7_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_7_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_7_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_7_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_7_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_8_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q8"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_8_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_8_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_8_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_8_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_8_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_8_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_9_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q9"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_9_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_9_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_9_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_9_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_9_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_9_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView_10_sus3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/sus_q10"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/question_10_radio_sus3"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:textSize="14sp">
+
+            <RadioButton
+                android:id="@+id/radio_10_1_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="1"/>
+
+            <RadioButton
+                android:id="@+id/radio_10_2_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/radio_10_3_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/radio_10_4_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/radio_10_5_sus3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/black"
+                android:text="5" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/continue_button_sus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/gotcha_blue"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/submit" />
+
+    </LinearLayout>
+
+
+</ScrollView>
