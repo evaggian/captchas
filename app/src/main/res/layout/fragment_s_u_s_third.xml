@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/montserrat"
             android:text="@string/sus_instructions"
             android:textColor="@color/gotcha_blue"
             android:fontFamily="@font/montserrat_bold"/>

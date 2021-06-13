@@ -1,9 +1,12 @@
 package com.example.mycatcha;
 
+import android.app.Notification;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
@@ -11,7 +14,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -21,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Objects;
 import java.util.Random;
 
 public class FirstFragment extends Fragment {
@@ -36,6 +43,7 @@ public class FirstFragment extends Fragment {
 
     public static int userID;
 
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -46,6 +54,7 @@ public class FirstFragment extends Fragment {
         return binding.getRoot();
 
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

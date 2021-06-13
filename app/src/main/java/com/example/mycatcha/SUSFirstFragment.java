@@ -1,5 +1,6 @@
 package com.example.mycatcha;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -21,6 +23,18 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SUSFirstFragment extends Fragment {
 
     private FragmentSUSFirstBinding binding;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        if (getActivity().getActionBar() != null) {
+            ActionBar actionBar = getActivity().getActionBar();
+            actionBar.setDisplayHomeAsUpEnabled(false);
+        }
+
+
+    }
 
     @Override
     public View onCreateView(
