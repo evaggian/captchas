@@ -17,7 +17,7 @@
 
     <!-- Introduction texts -->
     <string name="button">Continue</string>
-    <string name="consent">By selecting "Continue" you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
+    <string name="consent">By selecting <font color='#4A90E2'><b>&quot;Continue&quot;</b></font> you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
 
     <!-- Form texts -->
     <string name="first_name">First Name</string>

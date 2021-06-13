@@ -19,7 +19,7 @@
             android:fontFamily="@font/montserrat"
             android:text="@string/sus_instructions"
             android:textColor="@color/gotcha_blue"
-            android:textStyle="bold"/>
+            android:fontFamily="@font/montserrat_bold"/>
 
         <TextView
             android:id="@+id/textView_1_sus2"
