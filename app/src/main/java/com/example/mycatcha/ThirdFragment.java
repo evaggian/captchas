@@ -102,7 +102,7 @@ public class ThirdFragment extends Fragment {
                 if (orientations[2] > 170){
                     System.out.println("Congrats you succeeded!");
                     Toast.makeText(getActivity(),"Rotation CAPTCHA validation successful!", Toast.LENGTH_SHORT).show();
-                    //rotateCheck.setChecked(true);
+                    checkboxRotValidation.setChecked(true);
                 }
             }
 

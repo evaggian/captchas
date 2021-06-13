@@ -84,14 +84,14 @@ public class FirstFragment extends Fragment {
                 Toast.makeText(getActivity(), "The email field cannot be empty", Toast.LENGTH_LONG).show();
             }
             else if(!checkboxConsent.isChecked()){
-                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), "Please check the box first!", Toast.LENGTH_LONG).show();
             }
-            else if(!checkboxOCRValidation.isChecked()){
-                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
-            }
-            else if(!checkboxOCRValidation.isChecked()){
-                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
-            }
+//            else if(!checkboxOCRValidation.isChecked()){
+//                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+//            }
+//            else if(!checkboxOCRValidation.isChecked()){
+//                Toast.makeText(getActivity(), "Please check the boxes first!", Toast.LENGTH_LONG).show();
+//            }
             else if(textViewCaptchaText.getText().toString().isEmpty()){
                 Toast.makeText(getActivity(), "Please fill in the captcha text!", Toast.LENGTH_LONG).show();
             }
@@ -99,6 +99,9 @@ public class FirstFragment extends Fragment {
                 Toast.makeText(getActivity(), "The captcha you entered is wrong. Try again", Toast.LENGTH_LONG).show();
             }
             else {
+
+                checkboxOCRValidation.setChecked(true);
+
                 long timeSpent = Duration.between(start, Instant.now()).getSeconds();
 
                 Log.i("OCR task duration: ", String.valueOf(timeSpent));
