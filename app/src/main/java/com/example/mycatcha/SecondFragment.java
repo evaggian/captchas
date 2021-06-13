@@ -95,6 +95,7 @@ public class SecondFragment extends Fragment implements SensorEventListener{
                     // Detected something nearby
                     getView().findViewById(R.id.proximity_view).setBackgroundColor(getResources().getColor(color.gotcha_green));
                     Toast.makeText(getActivity(), "Proximity CAPTCHA validation successful!", Toast.LENGTH_LONG).show();
+                    checkboxProxValidation.setChecked(true);
                 } else {
                     // Nothing is nearby
                     Log.i("nothing nearby", "nothing nearby");

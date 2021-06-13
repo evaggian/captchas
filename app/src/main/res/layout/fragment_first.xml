@@ -94,6 +94,7 @@
         android:gravity="center"
         android:text="@string/ocr_validation"
         android:textSize="14sp"
+        android:enabled="false"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
