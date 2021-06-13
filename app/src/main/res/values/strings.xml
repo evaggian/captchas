@@ -7,7 +7,7 @@
     <string name="first_fragment_label">OCR CAPTCHA</string>
     <string name="second_fragment_label">Proximity CAPTCHA</string>
     <string name="third_fragment_label">Rotation CAPTCHA</string>
-    <string name="fourth_fragment_label">Fourth Fragment</string>
+    <string name="fourth_fragment_label">Demographics</string>
 
     <!-- Button texts -->
     <string name="next">Next</string>
@@ -51,7 +51,8 @@
     <string name="instructions_first_fragment_label">Instructions for the OCR CAPTCHA task</string>
     <string name="instructions_second_fragment_label">Instructions for the Proximity CAPTCHA task</string>
     <string name="instructions_third_fragment_label">Instructions for the Rotation CAPTCHA task</string>
-    <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.<br /> <br />The next task is the most common form of CAPTCHA, an image with several distorted letters. For this task you will have to fill in the letters shown in the picture into the respective field. </string>
+    <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.</string>
+    <string name="instruction1_text2">The first task is the most common form of CAPTCHA, an image with several distorted letters. For this task, you will have to fill in the letters shown in the picture into the respective field.</string>
     <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software.</string>
     <string name="instruction2_text_more">In order to successfully complete this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
     <string name="instruction3_text">In order to successfully complete this CAPTCHA you have to rotate your phone clockwise for 180 degrees. Be aware to switch off the auto rotate mode of your phone!</string>
@@ -78,6 +79,7 @@
     <string name="age">What is your age?</string>
     <string name="age_hint">Type in your age</string>
     <string name="demographics">Demographics</string>
+    <string name="first_text">Finally, we would like you to answer the following questions</string>
     <string name="male">male</string>
     <string name="female">female</string>
     <string name="other">other</string>

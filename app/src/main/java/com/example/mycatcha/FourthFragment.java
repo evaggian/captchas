@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -42,9 +41,6 @@ public class FourthFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView txt = (TextView) view.findViewById(R.id.textview_third);
-        txt.setText("Your ID is:" + FirstFragment.getRandomID());
-
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://mycaptcha-1e0f4-default-rtdb.europe-west1.firebasedatabase.app/");
         DatabaseReference userRef = database.getReference("User ID:" + FirstFragment.getRandomID());
 
@@ -64,7 +60,7 @@ public class FourthFragment extends Fragment {
             else{
                 Date currentTime = Calendar.getInstance().getTime();
 
-                userRef.child("Timestamp").setValue(currentTime);
+                userRef.child("Timestamp").setValue(currentTime.toString());
                 userRef.child("Gender").setValue(question_gender.getText());
                 userRef.child("Age").setValue(age.getText().toString());
                 userRef.child("Handedness").setValue(question_handedness.getText());

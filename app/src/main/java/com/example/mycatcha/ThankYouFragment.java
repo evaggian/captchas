@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.mycatcha.databinding.FragmentThankYouBinding;
 
+import java.util.Objects;
+
 public class ThankYouFragment extends Fragment {
 
     private FragmentThankYouBinding binding;
@@ -27,8 +29,6 @@ public class ThankYouFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        //terminate application
     }
 
     @Override

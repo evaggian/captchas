@@ -31,10 +31,29 @@
         android:text="@string/instruction1_text"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ocr_instructions_view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <TextView
+        android:id="@+id/ocr_instructions_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="120dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/instruction1_text2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/continue_button"

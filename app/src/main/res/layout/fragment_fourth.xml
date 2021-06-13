@@ -10,43 +10,28 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
-        android:text="@string/demographics"
+        android:text="@string/first_text"
         android:textColor="@color/gotcha_blue"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textview_third"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:gravity="center"
-        android:textSize="10sp"
-        android:fontFamily="@font/montserrat"
-        app:layout_constraintBottom_toTopOf="@+id/textView_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="69dp" />
 
     <TextView
         android:id="@+id/textView_1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
         android:text="@string/gender"
         android:textColor="@color/black"
-        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintBottom_toTopOf="@+id/question_gender_radio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_third" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <RadioGroup
         android:id="@+id/question_gender_radio"
@@ -102,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/continue_button"
-            app:layout_constraintTop_toBottomOf="@+id/textview_third" />
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
     </RadioGroup>
 
