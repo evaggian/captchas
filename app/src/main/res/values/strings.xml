@@ -18,7 +18,16 @@
     <!-- Introduction texts -->
     <string name="button">Continue</string>
     <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
-    <string name="consent">By selecting <font color='#4A90E2'><b>&quot;Continue&quot;</b></font> you consent in using and storing your data only for the purposes of this experiment. For more information, you can click on email here</string>
+    <string name="consent">By clicking <font color='#4A90E2'>continue</font> you indicate that you understand and consent to the following:
+        \n
+        \n&#8226; This application was built for research purposes. It is not meant to be used outside of the study.
+        \n&#8226; No personal data is collected. The data collection is limited to data relevant to our study, so performance related data is collected.
+        \n&#8226; All collected data is stored to a unique anonymized identifier.
+        \n&#8226; All data will be deleted half a year after it is collected, or the study ends, whichever is sooner.
+        \n
+        \nThe experiment takes about 15 minutes.
+        \n
+        \nFor more information contact: a.dimitriou1@students.uu.nl</string>
 
     <!-- Form texts -->
     <string name="first_name">First Name</string>
