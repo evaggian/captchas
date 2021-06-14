@@ -8,10 +8,12 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
         android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:text="@string/instructions_third_fragment_label"
         android:textColor="@color/gotcha_blue"
         android:textSize="24sp"
@@ -74,7 +76,7 @@
         android:layout_marginRight="50dp"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
-        android:text="@string/instruction_general"
+        android:text="@string/instruction_general_3"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/rotation_instructions_view4"

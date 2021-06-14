@@ -18,7 +18,7 @@
     <!-- Introduction texts -->
     <string name="button">Continue</string>
     <string name="first_instructions">Hi! We are the IaMHUM@n team. We are doing an experiment about mobile CAPTCHAs. Therefore we explore 3 different options.</string>
-    <string name="consent">By clicking <font color='#4A90E2'>continue</font> you indicate that you understand and consent to the following:
+    <string name="consent">By clicking \'continue\' below you indicate that you understand and consent to the following:
         \n
         \n&#8226; This application was built for research purposes. It is not meant to be used outside of the study.
         \n&#8226; No personal data is collected. The data collection is limited to data relevant to our study, so performance related data is collected.
@@ -57,15 +57,16 @@
     <string name="close_app">You can close the app now.</string>
 
     <!-- Instructions texts -->
-    <string name="instructions_first_fragment_label">Instructions OCR CAPTCHA task</string>
-    <string name="instructions_second_fragment_label">Instructions Proximity CAPTCHA task</string>
-    <string name="instructions_third_fragment_label">Instructions Rotation CAPTCHA task</string>
+    <string name="instructions_first_fragment_label">OCR CAPTCHA</string>
+    <string name="instructions_second_fragment_label">Proximity CAPTCHA</string>
+    <string name="instructions_third_fragment_label">Rotation CAPTCHA</string>
     <string name="instruction1_text">CAPTCHAs were invented to block spammy software from posting comments on pages or purchasing excess items at once.</string>
     <string name="instruction1_text2">The first task is the most common form of CAPTCHA, an image with several distorted letters. For this task, you will have to fill in the letters shown in the picture into the respective field.</string>
     <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software.</string>
     <string name="instruction2_text_more">In order to successfully complete this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
     <string name="instruction3_text">In order to successfully complete this CAPTCHA you have to rotate your phone clockwise for 180 degrees. Be aware to switch off the auto rotate mode of your phone!</string>
-    <string name="instruction_general">The input in the following form (name, e-mail) will not be stored and only works as a dummy for the scenario. This means that it does not matter what you put into the input fields.</string>
+    <string name="instruction_general">The input in the following form (name, surname, e-mail) will not be stored and only works as a dummy for the scenario. This means that it does not matter what you put into the input fields.</string>
+    <string name="instruction_general_3">The input in the following form (name, surname, e-mail) will not be stored and only works as a dummy for the scenario. This means that it does not matter what you put into the input fields. However, <b>please use the same input as in the previous task.</b></string>
     <string name="instruction_general2">After the CAPTCHA task, you will have to answer a questionnaire about the usability of the CAPTCHA. Please give honest feedback.</string>
 
     <!-- SUS texts -->
