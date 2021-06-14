@@ -111,7 +111,7 @@
     <fragment
         android:id="@+id/ThankYouFragment"
         android:name="com.example.mycatcha.ThankYouFragment"
-        android:label="@string/thankyou"
+        android:label="@string/thankyou2"
         tools:layout="@layout/fragment_thank_you">
 
     </fragment>

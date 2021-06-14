@@ -206,6 +206,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
         android:gravity="center"
+        android:singleLine="false" android:lines="3"
         android:hint="@string/comment"
         app:layout_constraintBottom_toTopOf="@+id/continue_button"
         app:layout_constraintEnd_toEndOf="parent"

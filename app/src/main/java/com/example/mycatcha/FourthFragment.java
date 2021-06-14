@@ -57,6 +57,9 @@ public class FourthFragment extends Fragment {
             if((question_gender == null) || (question_handedness == null) || age.getText().toString().isEmpty()){
                 Toast.makeText(getActivity(), "Please answer all questions!", Toast.LENGTH_LONG).show();
             }
+            else if((Integer.parseInt(age.getText().toString()) < 18)){
+                Toast.makeText(getActivity(), "The age should be over 18 years old.", Toast.LENGTH_LONG).show();
+            }
             else{
                 Date currentTime = Calendar.getInstance().getTime();
 

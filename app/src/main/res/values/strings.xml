@@ -54,7 +54,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="thankyou">Thank you for participating in our study!</string>
-    <string name="close_app">You can close the app now.</string>
+    <string name="thankyou2">Thank you!</string>
+    <string name="close_app">The application will terminate automatically soon.</string>
 
     <!-- Instructions texts -->
     <string name="instructions_first_fragment_label">OCR CAPTCHA</string>
@@ -65,9 +66,9 @@
     <string name="instruction2_text">The next type of CAPTCHA is an innovative way to block spammy software.</string>
     <string name="instruction2_text_more">In order to successfully complete this CAPTCHA you have to approach your palm close to the phone until the <font color='red'>RED</font> square turns to <font color='green'>GREEN</font>.</string>
     <string name="instruction3_text">In order to successfully complete this CAPTCHA you have to rotate your phone clockwise for 180 degrees. Be aware to switch off the auto rotate mode of your phone!</string>
-    <string name="instruction_general">The input in the following form (name, surname, e-mail) will not be stored and only works as a dummy for the scenario. This means that it does not matter what you put into the input fields.</string>
-    <string name="instruction_general_3">The input in the following form (name, surname, e-mail) will not be stored and only works as a dummy for the scenario. This means that it does not matter what you put into the input fields. However, <b>please use the same input as in the previous task.</b></string>
-    <string name="instruction_general2">After the CAPTCHA task, you will have to answer a questionnaire about the usability of the CAPTCHA. Please give honest feedback.</string>
+    <string name="instruction_general">The input in the following form (name, surname, e-mail) will not be stored. <b>You should use the same input for all the following CAPTCHAs</b>.</string>
+    <string name="instruction_general_3">The input in the following form (name, surname, e-mail) will not be stored. <b>Please use the same input as in the previous task.</b></string>
+    <string name="instruction_general2">After the CAPTCHA task, you will have to answer a questionnaire about the usability of it. Please give honest feedback.</string>
 
     <!-- SUS texts -->
     <string name="sus_first_fragment_label">SUS OCR CAPTCHA</string>
